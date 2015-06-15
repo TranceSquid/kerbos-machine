@@ -1,0 +1,6 @@
+[MASTER]
+ignore=example.py
+
+[OPTIONS]
+ignored-classes: tuple
+generated-members: '__table__'

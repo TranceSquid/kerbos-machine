@@ -1,0 +1,17 @@
+# core
+Flask==0.10.1
+
+# api
+Flask-SocketIO==0.6.0
+Flask-RESTful==0.3.3
+
+# database
+Flask-SQLALchemy==1.0.5
+psycopg2==2.6
+Flask-Migrate==1.4.0
+
+# deployment
+Fabric==1.10.1
+
+# development
+pylint==1.4.3

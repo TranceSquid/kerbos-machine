@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+    "SublimeLinter":
+    {
+        "linters":
+        {
+            "pylint": {
+                "@disable": false,
+                "@python": 3.4,
+                "excludes": [
+                    "*/test/**"
+                ],
+                "ignore": "W"
+            },
+            "pep8": {
+                "@disable": true,
+            }
+        }
+    }
+}
