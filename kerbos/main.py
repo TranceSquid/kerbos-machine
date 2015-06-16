@@ -1,6 +1,9 @@
+import os
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import os
+
+from models import Result
 
 
 app = Flask(__name__)
