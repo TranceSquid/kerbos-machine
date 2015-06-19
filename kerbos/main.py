@@ -3,12 +3,16 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-from models import Result
+import kerbos.shared as Shared
 
 
-app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
-db = SQLAlchemy(app)
+Shared.APP = Flask(__name__)
+app = Shared.APP
+
+CONFIG_PATH = 'kerbos.config.' + os.environ.get('APP_SETTINGS', 'DevelopmentConfig')
+app.config.from_object(CONFIG_PATH)
+
+Shared.DB = SQLAlchemy(app)
 
 @app.route('/')
 def hello():

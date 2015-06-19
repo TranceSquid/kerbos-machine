@@ -1,4 +1,4 @@
-from app import db
+from kerbos.shared import DB as db
 from sqlalchemy.dialects.postgresql import JSON
 
 
