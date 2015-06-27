@@ -6,7 +6,7 @@ Flask-SocketIO==0.6.0
 Flask-RESTful==0.3.3
 
 # database
-Flask-SQLALchemy==1.0.5
+Flask-SQLALchemy==2.0
 psycopg2==2.6
 Flask-Migrate==1.4.0
 
