@@ -12,6 +12,14 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def run():
+    config_path = 'kerbos.config.' + os.environ.get('APP_SETTINGS', 'DevelopmentConfig')
+    app.config.from_object(config_path)
+    app.run()
+
+@manager.command
+def prod():
+    config_path = 'kerbos.config.' + os.environ.get('APP_SETTINGS', 'ProductionConfig')
+    app.config.from_object(config_path)
     app.run()
 
 if __name__ == '__main__':

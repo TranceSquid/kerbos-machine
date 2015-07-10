@@ -1,4 +1,11 @@
 {
+    "folder_exclude_patterns":
+    [
+        ".env",
+        ".git",
+        "bower_components",
+        "node_modules"
+    ],
 	"folders":
 	[
 		{
