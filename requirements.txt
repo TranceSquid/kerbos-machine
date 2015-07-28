@@ -1,5 +1,6 @@
 # core
 Flask==0.10.1
+gevent==1.1b1
 
 # api
 Flask-SocketIO==0.6.0
@@ -10,8 +11,9 @@ Flask-SQLALchemy==2.0
 psycopg2==2.6
 Flask-Migrate==1.4.0
 
-# deployment
-Fabric==1.10.1
+# production
+psycogreen==1.0
+gunicorn==19.3.0
 
 # development
 pylint==1.4.3
