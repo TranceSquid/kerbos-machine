@@ -1,27 +1,32 @@
 import os
 
 
-class Config(object):
+class DefaultConfig(object):
     DEBUG = False
     TESTING = False
     SECRET_KEY = 'thisisnotthesecretyouarelookingfor'
-    DEFAULT_DATABASE_URI = "postgresql://localhost/kerbos/"
+    DEFAULT_DATABASE_URI = "postgresql://postgres@localhost/kerbos"
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', default=DEFAULT_DATABASE_URI)
 
 
-class ProductionConfig(Config):
+class ProductionConfig(DefaultConfig):
     DEBUG = False
 
 
-class StagingConfig(Config):
+class StagingConfig(DefaultConfig):
     DEVELOPMENT = True
     DEBUG = True
 
 
-class DevelopmentConfig(Config):
+class DevelopmentConfig(DefaultConfig):
     DEVELOPMENT = True
     DEBUG = True
 
 
-class TestingConfig(Config):
+class TestingConfig(DefaultConfig):
     TESTING = True
+
+
+class CircleCIConfig(DefaultConfig):
+    TESTING = True
+    DEFAULT_DATABASE_URI = "postgresql://ubuntu@localhost/circle_test"

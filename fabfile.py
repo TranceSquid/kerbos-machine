@@ -17,7 +17,7 @@ def update():
 
 def migrate():
     with cd('/kerbos'):
-        run('python3 manage.py migrate')
+        run('python3 manage.py db upgrade')
 
 def reload_application():
     with cd('/kerbos'):
