@@ -30,3 +30,4 @@ class TestingConfig(DefaultConfig):
 class CircleCIConfig(DefaultConfig):
     TESTING = True
     DEFAULT_DATABASE_URI = "postgresql://ubuntu@localhost/circle_test"
+
