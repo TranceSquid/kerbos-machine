@@ -2,10 +2,12 @@ from fabric.api import env, run, cd, task
 
 @task
 def staging():
+    env.use_ssh_config = True
     env.hosts = ['kerbos-staging.trancesquid.io']
 
 @task
 def prod():
+    env.use_ssh_config = True
     env.hosts = ['kerbos.trancesquid.io']
 
 def update():
