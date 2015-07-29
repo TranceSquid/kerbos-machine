@@ -6,10 +6,6 @@ test:
     - py.test --cov-config .coveragerc --ci --cov kerbos/
     - pylint --rcfile=.pylintrc -E kerbos/
 deployment:
-  staging:
-    branch: master
-    commands:
-      - fab staging deploy
   production:
     branch: production
     commands:

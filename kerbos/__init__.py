@@ -45,12 +45,8 @@ if using_gevent:
 
 @app.route('/')
 def hello():
-    return "Hello World!"
+    return "Hello hackers :)! Check us out at https://github.com/TranceSquid/kerbos-machine"
 
-
-@app.route('/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
 
 def get_app(config):
     config_path = 'kerbos.config.' + os.environ.get('APP_SETTINGS', '%sConfig' % config)
