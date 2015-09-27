@@ -4,8 +4,6 @@ This is an aggregation of all of the endpoints linking to their respectice speci
 
 ## Users
 
-### [/users/{user_id}](/specs/users/user.md)
-
-## Groups
-
-### [/group](/specs/groups/group.md)
+### [/users/{user_id}](/specs/users/users.md)
+### [/user](/specs/user/user.md)
+### [/user/device](/specs/user/device.md)
